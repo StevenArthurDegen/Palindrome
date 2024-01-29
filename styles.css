@@ -34,6 +34,9 @@ body {
     border-bottom: 5px solid #000;
     cursor: pointer;
   }
+  p{
+    font-size: 1.1rem;
+  }
   #content-container{
     background-color: #fff;
     padding: 25px;
@@ -48,4 +51,7 @@ body {
     padding: 5px 15px;
     border-radius:16px;
     margin: 15px 0;
+  }
+  #bold{
+    font-weight: bold;
   }
