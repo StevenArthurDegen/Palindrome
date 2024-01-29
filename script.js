@@ -14,22 +14,24 @@ const check = () => {
     const reverse = input.value.toLowerCase().replace(regex, '').split('').reverse();
     //Original user input
     const joined = input.value;
-    
-    //this will loop through wordOrPhrase and check if reverse matches up if not will return not palindrome
-    //Otherwise function will return is palindrome
-    for(let i = 0; i < wordOrPhrase.length; i++){
-        if(reverse[i] !== wordOrPhrase[i]){
-            return result.innerHTML = `
-             <p><span id="bold">${joined}</span> is not a palindrome</p>
-             `
+
+    //If user input is empty an alert will be thrown 
+    if(wordOrPhrase.length == 0){
+        return alert('Please input a value')
+    } else{
+        //this will loop through wordOrPhrase and check if reverse matches up if not will return not palindrome
+        //Otherwise function will return is palindrome
+        for(let i = 0; i < wordOrPhrase.length; i++){
+            if(reverse[i] !== wordOrPhrase[i]){
+                return result.innerHTML = `
+                <p><span id="bold">${joined}</span> is not a palindrome</p>
+                `
+            }
         }
+        result.innerHTML = `
+        <p><span id="bold">${joined}</span> is a palindrome</p>
+        `
     }
-
-    result.innerHTML = `
-    <p><span id="bold">${joined}</span> is a palindrome</p>
-    `
-    
-
 }
 
 //Added functionality to button
